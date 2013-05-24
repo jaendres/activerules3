@@ -1,0 +1,1 @@
+<script type="text/javascript" src="/static/js/jquery.layout.min-1.2.0.js"></script>

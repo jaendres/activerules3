@@ -1,0 +1,374 @@
+/*
+* Set some baseline CSS
+*/
+
+body {
+        background: #f0f0f0;
+    }
+
+nav ul li a {
+    color: #fff;
+}
+
+nav ul li li.active a a.visited {
+    color: #fff;
+}
+
+nav {
+    background: #006633;
+
+    background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0.05, #00994D),
+    color-stop(0.53, #006633)
+    );
+    background-image: -moz-linear-gradient(
+        center bottom,
+        #00994D 5%,
+        #006633 53%
+    );
+}
+
+#intro {
+    background: #134D2F;
+    color: #FFF;
+}
+
+#intro p {
+    color: #FFF;
+}
+
+header {
+    background: #f0f0f0;
+}
+
+#content {
+    background: #50B381;
+}
+
+
+/* Formalize library CSS used to create consistent form display */
+/* Uses Formalize JS copied into the activerules.js file.*/
+
+/* `Widths
+----------------------------------------------------------------------------------------------------*/
+
+.input_tiny {
+}
+
+.input_small {
+}
+
+.input_medium {
+}
+
+.input_large {
+}
+
+.input_xlarge {
+}
+
+.input_xxlarge {
+}
+
+.input_full {
+}
+
+/*
+  Added via JS to <textarea> and class="input_full".
+  Applies only to IE7. Other browsers don't need it.
+*/
+.input_full_wrap {
+}
+
+/* `UI Consistency
+----------------------------------------------------------------------------------------------------*/
+
+::-moz-focus-inner {
+}
+
+input[type="search"]::-webkit-search-decoration {
+}
+
+input,
+button,
+select,
+textarea {
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+
+}
+
+/* iPad */
+@media (-webkit-min-device-pixel-ratio: 1) and (max-device-width: 1024px) {
+
+  }
+}
+
+/* iPhone 3 */
+@media (-webkit-min-device-pixel-ratio: 1) and (max-device-width: 480px) {
+
+  }
+}
+
+/* iPhone 4 */
+@media (-webkit-min-device-pixel-ratio: 2) and (max-device-width: 480px) {
+
+  }
+}
+
+button,
+input[type="reset"],
+input[type="submit"],
+input[type="button"] {
+  background: #ddd url(../images/button.png) repeat-x;
+  background: -webkit-gradient(color-stop(0, #fff), color-stop(1, #ddd));
+  background: -moz-linear-gradient(#fff 0%, #ddd 100%);
+  border-color: #ddd #bbb #999;
+  color: #333;
+  /*
+    Helvetica Neue present, because it works better
+    for line-height on buttons than Arial, on OS X.
+  */
+  text-shadow: #fff 0 1px 1px;
+
+  /* IE7 */
+
+}
+
+button {
+  /* IE7 */
+}
+
+textarea,
+select,
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"] {
+  background-color: #fff;
+  border-color: #848484 #c1c1c1 #e1e1e1;
+  color: #000;
+
+  /*
+    Leaving out Helvetica Neue, to not throw off size="..."
+    on inputs. Arial is more reliable, on Windows and OS X.
+  */
+
+
+  /* IE7 */
+}
+
+/*
+  Separate rule for Firefox.
+  Separate rule for IE, too.
+  Cannot stack with WebKit's.
+*/
+::-webkit-input-placeholder {
+  color: #888;
+}
+
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+  color: #888;
+}
+
+input.placeholder_text,
+textarea.placeholder_text {
+  color: #888;
+}
+
+:invalid {
+  /*
+    Suppress red glow that Firefox
+    adds to form fields by default,
+    even when user is still typing.
+  */
+
+}
+
+button:focus,
+button:active,
+input:focus,
+input:active,
+select:focus,
+select:active,
+textarea:focus,
+textarea:active {
+  -moz-box-shadow: #06f;
+  -webkit-box-shadow: #06f;
+  box-shadow: #06f;
+
+  /* for Opera */
+
+}
+
+input[type="file"]:focus,
+input[type="file"]:active,
+input[type="radio"]:focus,
+input[type="radio"]:active,
+input[type="checkbox"]:focus,
+input[type="checkbox"]:active {
+}
+
+select[disabled],
+textarea[disabled],
+input[type="date"][disabled],
+input[type="datetime"][disabled],
+input[type="datetime-local"][disabled],
+input[type="email"][disabled],
+input[type="month"][disabled],
+input[type="number"][disabled],
+input[type="password"][disabled],
+input[type="search"][disabled],
+input[type="tel"][disabled],
+input[type="text"][disabled],
+input[type="time"][disabled],
+input[type="url"][disabled],
+input[type="week"][disabled] {
+  background-color: #eee;
+}
+
+button[disabled],
+input[disabled],
+select[disabled],
+select[disabled] option,
+select[disabled] optgroup,
+textarea[disabled] {
+  color: #888;
+}
+
+textarea,
+select[size],
+select[multiple] {
+}
+
+/* Tweaks for Safari + Chrome. */
+@media (-webkit-min-device-pixel-ratio: 0) {
+  select {
+    background-image: url(../images/select_arrow.gif);
+  }
+
+  select[size],
+  select[multiple] {
+    background-image: none;
+  }
+
+  ::-webkit-validation-bubble-message {
+    box-shadow: rgba(0, 0, 0, 0.5);
+    background: -webkit-gradient(color-stop(0, #666), color-stop(1, #000));
+    border-color: #747474 #5e5e5e #4f4f4f;
+    color: #fff;
+    text-shadow: #000;
+  }
+
+  ::-webkit-validation-bubble-arrow,
+  ::-webkit-validation-bubble-top-outer-arrow,
+  ::-webkit-validation-bubble-top-inner-arrow {
+  }
+}
+
+textarea {
+}
+
+optgroup {
+  color: #000;
+}
+
+/* `IE6
+----------------------------------------------------------------------------------------------------*/
+
+/*
+  Everything below this line is for IE6.
+  Delete it if you don't support it! :)
+
+  Classes are added dynamically via JS,
+  because IE6 doesn't support attribute
+  selectors: .ie6_button, .ie6_input, etc.
+
+  Note: These style rules are somewhat
+  duplicated because IE6 bombs out when
+  it sees attribute selectors. Example:
+
+  .ie6_button {
+    This works in IE6.
+  }
+
+  .ie6_button,
+  input[type=submit] {
+    This doesn't work.
+  }
+*/
+
+.ie6_button,
+* html button {
+  background: #ddd url(../images/button.png) repeat-x;
+  border-color: #ddd #bbb #999;
+  color: #333;
+}
+
+* html button {
+}
+
+.ie6_input,
+* html textarea,
+* html select {
+  background: #fff;
+  border-color: #848484 #c1c1c1 #e1e1e1;
+  color: #000;
+}
+
+* html select {
+}
+
+.placeholder_text,
+.ie6_input_disabled,
+.ie6_button_disabled {
+  color: #888;
+}
+
+.ie6_input_disabled {
+  background: #eee;
+}
+
+/*
+* ===============================================================
+*    jqModal Styling
+* Placed after form styling so the form styling doesn't interfer with the modal.'
+*/
+
+/* jqModal base Styling courtesy of;
+	Brice Burgess <bhb@iceburg.net> */
+
+/* The Window's CSS z-index value is respected (takes priority). If none is supplied,
+	the Window's z-index value will be set to 3000 by default (via jqModal.js). */
+
+.active_modal {
+    background-color: #EEE;
+    color: #333;
+}
+
+.jqmOverlay { background-color: #000; }
+
+/* Background iframe styling for IE6. Prevents ActiveX bleed-through (<select> form elements, etc.) */
+* iframe.jqm {
+}
+
+/* Fixed posistioning emulation for IE6
+     Star selector used to hide definition from browsers other than IE6
+     For valid CSS, use a conditional include instead */
+* html .active_modal {
+}

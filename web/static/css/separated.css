@@ -1,0 +1,621 @@
+/*
+* Set some baseline CSS
+*/
+
+
+	    html, body, div, span, applet, object, iframe,
+		h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+		a, abbr, acronym, address, big, cite, code,
+		del, dfn, em, img, ins, kbd, q, s, samp,
+		small, strike, strong, sub, sup, tt, var,
+		b, u, i, center,
+		dl, dt, dd, ol, ul, li,
+		fieldset, form, label, legend,
+		table, caption, tbody, tfoot, thead, tr, th, td,
+		article, aside, canvas, details, embed,
+		figure, figcaption, footer, header, hgroup,
+		menu, nav, output, ruby, section, summary,
+		time, mark, audio, video {
+			margin: 0;
+			padding: 0;
+			border: 0;
+			font-size: 100%;
+			font: inherit;
+			vertical-align: baseline;
+		}
+		/* HTML5 display-role reset for older browsers */
+		article, aside, details, figcaption, figure,
+		footer, header, hgroup, menu, nav, section {
+			display: block;
+		}
+		body {
+			line-height: 1;
+		}
+		ol, ul {
+			list-style: none;
+		}
+		blockquote, q {
+			quotes: none;
+		}
+		blockquote:before, blockquote:after,
+		q:before, q:after {
+			content: '';
+			content: none;
+		}
+		table {
+			border-collapse: collapse;
+			border-spacing: 0;
+		}
+
+		/* Tell the browser to render HTML 5 elements as block */
+		header, footer, aside, nav, article {
+			display: block;
+		}
+
+		body {
+			margin: 0 auto;
+			width: 940px;
+			font: 18px/22px Helvetica, Arial, sans-serif;
+		}
+
+		h1 {
+			font-size: 26px;
+			line-height: 44px;
+			padding: 20px;
+			font-weight: bold;
+		}
+
+		h2 {
+			font-size: 24px;
+			line-height: 40px;
+			padding: 16px 0;
+			font-weight: bold;
+		}
+
+		h3 {
+			font-size: 20px;
+			line-height: 22px;
+			padding: 11px 0;
+			font-weight: bold;
+		}
+
+		p {
+			padding-bottom: 22px;
+		}
+
+		nav {
+            position: absolute;
+            left: 0;
+			width: 100%;
+		}
+
+		nav ul {
+			margin: 0 auto;
+			width: 940px;
+			list-style: none;
+		}
+
+		nav ul li {
+			float: left;
+		}
+
+        nav ul li a {
+            display: block;
+            margin-right: 20px;
+            width: 140px;
+            font-size: 15px;
+            line-height: 44px;
+            text-align: center;
+            text-decoration: none;
+        }
+
+		nav ul li a:hover {
+			font-size: 19px;
+		}
+
+		nav ul li.selected a {
+			font-size: 18px;
+		}
+
+		li {
+			line-height: 30px;
+		}
+
+		#intro {
+			margin-top: 66px;
+            margin-bottom: 15px;
+			padding: 5px;
+
+			background-size: 100%;
+			/* Background-size not implemented yet */
+			-webkit-background-size: 100%;
+			-o-background-size: 100%;
+			-khtml-background-size: 100%;
+            border-radius: 22px;
+			/* Border-radius not implemented yet */
+			-moz-border-radius:  22px;
+			-webkit-border-radius:  22px;
+		}
+
+		#intro p {
+			padding: 0;
+		}
+
+        #intro h1 {
+			text-align: center;
+		}
+
+		header {
+			margin: 4px 0 1px 0;
+            height: auto;
+		}
+
+		#content {
+			display: table;
+			border-radius: 22px;
+
+			/* Border-radius not implemented yet */
+			-moz-border-radius:  22px;
+			-webkit-border-radius:  22px;
+		}
+
+        #mainContent {
+            display: table-cell;
+            width: 620px;
+            padding: 10px 30px;
+        }
+
+        aside {
+            display: table-cell;
+            width: 300px;
+            padding: 0 30px 0 0;
+            font-size: smaller;
+        }
+
+        .smallprint {
+            font-size: xx-small;
+        }
+
+/* Formalize library CSS used to create consistent form display */
+/* Uses Formalize JS copied into the activerules.js file.*/
+
+/* `Widths
+----------------------------------------------------------------------------------------------------*/
+
+.input_tiny {
+  width: 50px;
+}
+
+.input_small {
+  width: 100px;
+}
+
+.input_medium {
+  width: 150px;
+}
+
+.input_large {
+  width: 200px;
+}
+
+.input_xlarge {
+  width: 250px;
+}
+
+.input_xxlarge {
+  width: 300px;
+}
+
+.input_full {
+  width: 100%;
+}
+
+/*
+  Added via JS to <textarea> and class="input_full".
+  Applies only to IE7. Other browsers don't need it.
+*/
+.input_full_wrap {
+  display: block;
+  padding-right: 8px;
+}
+
+/* `UI Consistency
+----------------------------------------------------------------------------------------------------*/
+
+::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+input[type="search"]::-webkit-search-decoration {
+  display: none;
+}
+
+input,
+button,
+select,
+textarea {
+  margin: 0;
+  vertical-align: middle;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  position: relative;
+  vertical-align: top;
+  top: 3px;
+  /* IE8, IE9, IE10 */
+  top: 0\0;
+  /* IE7 */
+  *top: -3px;
+}
+
+/* iPad */
+@media (-webkit-min-device-pixel-ratio: 1) and (max-device-width: 1024px) {
+  input[type="radio"],
+  input[type="checkbox"] {
+    vertical-align: baseline;
+    top: 2px;
+  }
+}
+
+/* iPhone 3 */
+@media (-webkit-min-device-pixel-ratio: 1) and (max-device-width: 480px) {
+  input[type="radio"],
+  input[type="checkbox"] {
+    vertical-align: baseline;
+    top: 0;
+  }
+}
+
+/* iPhone 4 */
+@media (-webkit-min-device-pixel-ratio: 2) and (max-device-width: 480px) {
+  input[type="radio"],
+  input[type="checkbox"] {
+    vertical-align: baseline;
+    top: 0;
+  }
+}
+
+button,
+input[type="reset"],
+input[type="submit"],
+input[type="button"] {
+  -webkit-appearance: none;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding;
+  background-clip: padding-box;
+  background: #ddd url(../images/button.png) repeat-x;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff), color-stop(1, #ddd));
+  background: -moz-linear-gradient(top center, #fff 0%, #ddd 100%);
+  border: 1px solid;
+  border-color: #ddd #bbb #999;
+  cursor: pointer;
+  color: #333;
+  /*
+    Helvetica Neue present, because it works better
+    for line-height on buttons than Arial, on OS X.
+  */
+  font: bold 12px/1.3 'Helvetica Neue', Arial, 'Liberation Sans', FreeSans, sans-serif;
+  outline: 0;
+  overflow: visible;
+  padding: 3px 10px;
+  text-shadow: #fff 0 1px 1px;
+  width: auto;
+
+  /* IE7 */
+  *padding-top: 2px;
+  *padding-bottom: 0px;
+}
+
+button {
+  /* IE7 */
+  *padding-top: 1px;
+  *padding-bottom: 1px;
+}
+
+textarea,
+select,
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"] {
+  -webkit-appearance: none;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding;
+  background-clip: padding-box;
+  background-color: #fff;
+  border: 1px solid;
+  border-color: #848484 #c1c1c1 #e1e1e1;
+  color: #000;
+  outline: 0;
+  padding: 2px 3px;
+  font-size: 13px;
+  /*
+    Leaving out Helvetica Neue, to not throw off size="..."
+    on inputs. Arial is more reliable, on Windows and OS X.
+  */
+  font-family: Arial, 'Liberation Sans', FreeSans, sans-serif;
+  height: 1.8em;
+
+  /* IE7 */
+  *padding-top: 2px;
+  *padding-bottom: 1px;
+  *height: auto;
+}
+
+/*
+  Separate rule for Firefox.
+  Separate rule for IE, too.
+  Cannot stack with WebKit's.
+*/
+::-webkit-input-placeholder {
+  color: #888;
+}
+
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+  color: #888;
+}
+
+input.placeholder_text,
+textarea.placeholder_text {
+  color: #888;
+}
+
+:invalid {
+  /*
+    Suppress red glow that Firefox
+    adds to form fields by default,
+    even when user is still typing.
+  */
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+button:focus,
+button:active,
+input:focus,
+input:active,
+select:focus,
+select:active,
+textarea:focus,
+textarea:active {
+  -moz-box-shadow: #06f 0 0 7px;
+  -webkit-box-shadow: #06f 0 0 7px;
+  box-shadow: #06f 0 0 7px;
+
+  /* for Opera */
+  z-index: 1;
+}
+
+input[type="file"]:focus,
+input[type="file"]:active,
+input[type="radio"]:focus,
+input[type="radio"]:active,
+input[type="checkbox"]:focus,
+input[type="checkbox"]:active {
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+select[disabled],
+textarea[disabled],
+input[type="date"][disabled],
+input[type="datetime"][disabled],
+input[type="datetime-local"][disabled],
+input[type="email"][disabled],
+input[type="month"][disabled],
+input[type="number"][disabled],
+input[type="password"][disabled],
+input[type="search"][disabled],
+input[type="tel"][disabled],
+input[type="text"][disabled],
+input[type="time"][disabled],
+input[type="url"][disabled],
+input[type="week"][disabled] {
+  background-color: #eee;
+}
+
+button[disabled],
+input[disabled],
+select[disabled],
+select[disabled] option,
+select[disabled] optgroup,
+textarea[disabled] {
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  color: #888;
+  cursor: default;
+}
+
+textarea,
+select[size],
+select[multiple] {
+  height: auto;
+}
+
+/* Tweaks for Safari + Chrome. */
+@media (-webkit-min-device-pixel-ratio: 0) {
+  select {
+    background-image: url(../images/select_arrow.gif);
+    background-repeat: no-repeat;
+    background-position: right center;
+    padding-right: 20px;
+  }
+
+  select[size],
+  select[multiple] {
+    background-image: none;
+    padding: 0;
+  }
+
+  ::-webkit-validation-bubble-message {
+    box-shadow: rgba(0, 0, 0, 0.5) 0 0 5px;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #666), color-stop(1, #000));
+    border: 1px solid;
+    border-color: #747474 #5e5e5e #4f4f4f;
+    color: #fff;
+    font: 11px/1 'Lucida Grande', Arial, 'Liberation Sans', FreeSans, sans-serif;
+    padding: 15px 15px 17px;
+    text-shadow: #000 0 0 1px;
+  }
+
+  ::-webkit-validation-bubble-arrow,
+  ::-webkit-validation-bubble-top-outer-arrow,
+  ::-webkit-validation-bubble-top-inner-arrow {
+    display: none;
+  }
+}
+
+textarea {
+  min-height: 40px;
+  overflow: auto;
+  resize: vertical;
+  width: 100%;
+}
+
+optgroup {
+  color: #000;
+  font-style: normal;
+  font-weight: normal;
+}
+
+/* `IE6
+----------------------------------------------------------------------------------------------------*/
+
+/*
+  Everything below this line is for IE6.
+  Delete it if you don't support it! :)
+
+  Classes are added dynamically via JS,
+  because IE6 doesn't support attribute
+  selectors: .ie6_button, .ie6_input, etc.
+
+  Note: These style rules are somewhat
+  duplicated because IE6 bombs out when
+  it sees attribute selectors. Example:
+
+  .ie6_button {
+    This works in IE6.
+  }
+
+  .ie6_button,
+  input[type=submit] {
+    This doesn't work.
+  }
+*/
+
+.ie6_button,
+* html button {
+  background: #ddd url(../images/button.png) repeat-x;
+  border: 1px solid;
+  border-color: #ddd #bbb #999;
+  cursor: pointer;
+  color: #333;
+  font: bold 12px/1.2 Arial, sans-serif;
+  padding: 2px 10px 0px;
+  overflow: visible;
+  width: auto;
+}
+
+* html button {
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+
+.ie6_input,
+* html textarea,
+* html select {
+  background: #fff;
+  border: 1px solid;
+  border-color: #848484 #c1c1c1 #e1e1e1;
+  color: #000;
+  padding: 2px 3px 1px;
+  font-size: 13px;
+  font-family: Arial, sans-serif;
+  vertical-align: top;
+}
+
+* html select {
+  margin-top: 1px;
+}
+
+.placeholder_text,
+.ie6_input_disabled,
+.ie6_button_disabled {
+  color: #888;
+}
+
+.ie6_input_disabled {
+  background: #eee;
+}
+
+/*
+* ===============================================================
+*    jqModal Styling
+* Placed after form styling so the form styling doesn't interfer with the modal.'
+*/
+
+/* jqModal base Styling courtesy of;
+	Brice Burgess <bhb@iceburg.net> */
+
+/* The Window's CSS z-index value is respected (takes priority). If none is supplied,
+	the Window's z-index value will be set to 3000 by default (via jqModal.js). */
+
+.active_modal {
+    display: none;
+
+    border-radius: 15px;
+
+    position: fixed;
+    top: 17%;
+    left: 50%;
+
+    margin-left: -300px;
+    width: 600px;
+
+
+    border: 1px solid black;
+    padding: 12px;
+}
+
+.jqmOverlay { background-color: #000; }
+
+/* Background iframe styling for IE6. Prevents ActiveX bleed-through (<select> form elements, etc.) */
+* iframe.jqm {position:absolute;top:0;left:0;z-index:-1;
+	width: expression(this.parentNode.offsetWidth+'px');
+	height: expression(this.parentNode.offsetHeight+'px');
+}
+
+/* Fixed posistioning emulation for IE6
+     Star selector used to hide definition from browsers other than IE6
+     For valid CSS, use a conditional include instead */
+* html .active_modal {
+     position: absolute;
+     top: expression((document.documentElement.scrollTop || document.body.scrollTop) + Math.round(17 * (document.documentElement.offsetHeight || document.body.clientHeight) / 100) + 'px');
+}
